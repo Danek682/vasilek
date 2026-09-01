@@ -1,0 +1,51 @@
+.veil{position:fixed;inset:0;z-index:var(--z-modal);display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:clamp(12px,4vh,52px) 12px;background:oklch(27% .062 300 / .5);opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.veilOn{opacity:1;visibility:visible}
+
+.modal{width:100%;max-width:520px;margin:auto;padding:24px;border-radius:var(--r-lg);background:var(--white);transform:translateY(16px) scale(.985);transition:transform .34s var(--ease)}
+.veilOn .modal{transform:none}
+
+.head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.head h2{font-family:var(--f-display);font-weight:400;font-size:1.6rem;line-height:1.08}
+.head p{margin-top:5px;font-size:.85rem;color:var(--ink-2)}
+.close{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--wash-2);font-size:1.1rem;line-height:1;transition:background-color .2s var(--ease)}
+.close:hover{background:var(--lilac-soft)}
+
+.recap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;padding:13px 16px;margin-bottom:18px;border-radius:var(--r-md);background:var(--wash)}
+.recap span{font-size:.83rem;color:var(--ink-2)}
+.recap b{font-family:var(--f-display);font-weight:400;font-size:1.4rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--lilac-deep)}
+.recapList{flex:1 1 100%;display:flex;flex-direction:column;gap:3px;font-size:.8rem;color:var(--ink-2)}
+.recapLine{display:flex;justify-content:space-between;gap:12px}
+
+.form{display:flex;flex-direction:column;gap:14px}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.field{flex:1 1 190px;display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.field label i{font-style:normal;color:var(--fuchsia)}
+.field input,.field textarea{padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--wash);transition:border-color .2s var(--ease),box-shadow .2s var(--ease),background-color .2s var(--ease)}
+.field textarea{min-height:84px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-3)}
+.field input:hover,.field textarea:hover{border-color:var(--lilac-soft)}
+.field input:focus,.field textarea:focus{outline:none;background:var(--white);border-color:var(--lilac);box-shadow:0 0 0 3px oklch(63% .155 300 / .16)}
+.field input:not(:placeholder-shown):invalid{border-color:var(--fuchsia)}
+
+.ways{display:flex;flex-direction:column;gap:8px}
+.waysTitle{font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.waysRow{display:flex;flex-wrap:wrap;gap:10px}
+.way{flex:1 1 170px;display:flex;align-items:flex-start;gap:10px;padding:13px 15px;border:1.5px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s var(--ease),background-color .2s var(--ease)}
+.way:hover{border-color:var(--lilac-soft)}
+.wayOn{border-color:var(--lilac);background:oklch(63% .155 300 / .06)}
+.way input{width:18px;height:18px;margin-top:2px;flex:0 0 auto;accent-color:var(--lilac)}
+.wayText{display:flex;flex-direction:column;gap:2px}
+.wayText b{font-size:.92rem;font-weight:600}
+.wayText span{font-size:.76rem;color:var(--ink-2)}
+
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:.78rem;line-height:1.45;color:var(--ink-2)}
+.consent input{flex:0 0 auto;width:18px;height:18px;margin-top:2px;accent-color:var(--lilac)}
+
+.error{padding:11px 14px;border-radius:12px;background:oklch(60% .215 350 / .1);font-size:.83rem;color:var(--fuchsia-dark)}
+.note{font-size:.75rem;color:var(--ink-3);text-wrap:pretty}
+
+.done{display:flex;flex-direction:column;align-items:center;gap:14px;padding:20px 6px 8px;text-align:center}
+.doneMark{display:flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:var(--lilac-soft);font-size:1.7rem;color:var(--lilac-deep)}
+.done h2{font-family:var(--f-display);font-weight:400;font-size:1.55rem;line-height:1.1}
+.done p{font-size:.92rem;color:var(--ink-2);max-width:38ch;text-wrap:pretty}

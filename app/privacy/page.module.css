@@ -1,0 +1,9 @@
+.doc{display:flex;flex-direction:column;gap:22px;max-width:76ch;margin:0 auto;padding:clamp(30px,4vw,60px) var(--sp-md) var(--sp-sec)}
+.block{display:flex;flex-direction:column;gap:8px}
+.block h2{font-family:var(--f-display);font-weight:400;font-size:1.2rem;line-height:1.16}
+.block p,.block li{font-size:.94rem;color:var(--ink-2);text-wrap:pretty}
+.block ul{display:flex;flex-direction:column;gap:6px}
+.block li{display:flex;gap:10px}
+.block li::before{content:"—";flex:0 0 auto;color:var(--lilac)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.8rem;color:var(--ink-3)}
+.draft{padding:14px 16px;border-radius:12px;background:oklch(83% .155 80 / .16);font-size:.86rem;color:var(--ink)}

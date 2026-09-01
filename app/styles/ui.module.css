@@ -1,0 +1,38 @@
+/* Общие примитивы. Не глобальные стили: обычный CSS-модуль,
+   который импортируется теми компонентами, которым он нужен. */
+
+.shell{width:100%;max-width:var(--w);margin:0 auto;padding:0 var(--sp-md)}
+
+.sec{padding:var(--sp-sec) 0}
+.secTight{padding-top:0}
+
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--sp-md);margin-bottom:clamp(20px,2.8vw,36px)}
+.headText{display:flex;flex-direction:column;gap:8px;max-width:46ch}
+
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac-mid)}
+.h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,5.6vw,4rem);line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+.h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.75rem,3.8vw,2.7rem);line-height:1.06;letter-spacing:-.015em;text-wrap:balance}
+.h3{font-family:var(--f-display);font-weight:400;font-size:1.35rem;line-height:1.15}
+.lead{font-size:clamp(1.02rem,1.4vw,1.22rem);line-height:1.55;color:var(--ink-2);max-width:56ch;text-wrap:pretty}
+.hint{font-size:.86rem;color:var(--ink-2);text-wrap:pretty}
+.u{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:var(--r-pill);font-size:.95rem;font-weight:600;letter-spacing:-.01em;text-align:center;transition:transform .18s var(--ease),background-color .22s var(--ease),border-color .22s var(--ease),color .22s var(--ease),opacity .2s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.985)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+.btnPrimary{background:var(--lilac);color:var(--white)}
+.btnPrimary:hover{background:var(--lilac-mid)}
+.btnAccent{background:var(--fuchsia);color:var(--white)}
+.btnAccent:hover{background:var(--fuchsia-dark)}
+.btnGhost{border:1.5px solid var(--line);color:var(--ink)}
+.btnGhost:hover{border-color:var(--lilac);color:var(--lilac-mid)}
+.btnOnDark{background:var(--cream);color:var(--violet-ink)}
+.btnOnDark:hover{background:var(--white)}
+.btnSm{min-height:42px;padding:0 18px;font-size:.87rem}
+.btnWide{width:100%}
+
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--white);font-size:.82rem;font-weight:500;color:var(--ink-2)}
+
+.price{font-family:var(--f-display);font-weight:400;letter-spacing:-.02em;font-variant-numeric:tabular-nums}

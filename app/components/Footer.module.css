@@ -1,0 +1,19 @@
+.foot{margin-top:auto;background:var(--lilac-deep);color:oklch(92% .03 305)}
+.in{display:flex;flex-wrap:wrap;gap:var(--sp-lg);padding:clamp(34px,4.4vw,58px) var(--sp-md) 22px;max-width:var(--w);margin:0 auto}
+
+.brand{flex:1 1 260px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.logo{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.5rem;color:var(--cream)}
+.brand p{font-size:.88rem;max-width:34ch}
+
+.col{flex:1 1 190px;display:flex;flex-direction:column;gap:9px;font-size:.9rem}
+.col h4{font-family:var(--f-body);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:oklch(76% .07 305);margin-bottom:3px}
+.col a{transition:color .2s var(--ease)}
+.col a:hover{color:var(--cream)}
+.tel{font-family:var(--f-display);font-weight:400;font-size:1.4rem;letter-spacing:-.02em;color:var(--cream)}
+
+.days{display:flex;flex-direction:column;gap:5px;font-variant-numeric:tabular-nums}
+.day{display:flex;justify-content:space-between;gap:14px}
+.day span:first-child{color:oklch(78% .05 305)}
+
+.legal{flex:1 1 100%;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;padding-top:20px;border-top:1px solid oklch(45% .09 300);font-size:.76rem;color:oklch(76% .05 305)}

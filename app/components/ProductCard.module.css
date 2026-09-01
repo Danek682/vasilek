@@ -1,0 +1,57 @@
+.item{flex:1 1 208px;display:flex;flex-direction:column;gap:11px;max-width:100%}
+
+.thumbWrap{position:relative;display:flex;overflow:hidden;border-radius:var(--r-md);aspect-ratio:4 / 5;background:var(--wash-2)}
+.photo{width:100%;height:100%;object-fit:cover}
+
+/* Заглушки: пока нет фото, карточка рисуется узором из оттенка --h */
+.thumb{flex:1;background-color:oklch(93% .04 calc(var(--h) - 8))}
+.s1{background-image:
+  radial-gradient(circle 15% at 30% 26%,oklch(68% .17 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 15% at 66% 20%,oklch(74% .15 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 17% at 48% 48%,oklch(63% .19 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 14% at 24% 60%,oklch(72% .16 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 14% at 74% 55%,oklch(66% .18 var(--h)) 0 96%,transparent 97%),
+  linear-gradient(180deg,transparent 0 68%,oklch(86% .07 148) 68% 100%)}
+.s2{background-image:
+  radial-gradient(circle 22% at 36% 32%,oklch(72% .13 calc(var(--h) + 6)) 0 96%,transparent 97%),
+  radial-gradient(circle 19% at 68% 44%,oklch(78% .1 calc(var(--h) - 14)) 0 96%,transparent 97%),
+  radial-gradient(circle 15% at 44% 62%,oklch(68% .15 calc(var(--h) + 20)) 0 96%,transparent 97%),
+  linear-gradient(180deg,transparent 0 74%,oklch(84% .08 150) 74% 100%)}
+.s3{background-image:
+  radial-gradient(circle 12% at 26% 24%,oklch(70% .17 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 10% at 52% 18%,oklch(88% .12 92) 0 96%,transparent 97%),
+  radial-gradient(circle 13% at 72% 30%,oklch(66% .16 calc(var(--h) + 34)) 0 96%,transparent 97%),
+  radial-gradient(circle 11% at 36% 46%,oklch(76% .13 calc(var(--h) - 26)) 0 96%,transparent 97%),
+  radial-gradient(circle 14% at 60% 54%,oklch(62% .18 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 9% at 22% 64%,oklch(84% .1 200) 0 96%,transparent 97%),
+  linear-gradient(180deg,transparent 0 70%,oklch(85% .075 150) 70% 100%)}
+.s4{background-image:
+  radial-gradient(circle 20% at 38% 30%,oklch(62% .2 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 20% at 64% 30%,oklch(62% .2 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(circle 26% at 51% 52%,oklch(58% .21 var(--h)) 0 96%,transparent 97%),
+  linear-gradient(180deg,transparent 0 78%,oklch(88% .05 305) 78% 100%)}
+.s5{background-image:
+  radial-gradient(ellipse 13% 16% at 28% 26%,oklch(70% .17 var(--h)) 0 96%,transparent 97%),
+  radial-gradient(ellipse 13% 16% at 52% 18%,oklch(80% .13 calc(var(--h) + 40)) 0 96%,transparent 97%),
+  radial-gradient(ellipse 13% 16% at 72% 30%,oklch(74% .15 calc(var(--h) - 40)) 0 96%,transparent 97%),
+  linear-gradient(90deg,transparent 0 49.7%,oklch(72% .04 305) 49.7% 50.3%,transparent 50.3%),
+  linear-gradient(180deg,transparent 0 86%,oklch(90% .04 305) 86% 100%)}
+
+.tag{position:absolute;left:10px;top:10px;padding:5px 11px;border-radius:var(--r-pill);background:oklch(99% .01 305 / .9);font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--lilac-mid)}
+
+.body{display:flex;flex-direction:column;gap:3px}
+.title{font-size:.94rem;font-weight:500;line-height:1.35;text-wrap:pretty}
+.price{font-family:var(--f-display);font-weight:400;font-size:1.28rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--lilac-deep)}
+
+.act{display:flex;align-items:center;margin-top:auto;padding-top:3px}
+.add{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:42px;border:1.5px solid var(--line);border-radius:var(--r-pill);background:var(--white);font-size:.87rem;font-weight:600;transition:border-color .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease)}
+.add:hover{border-color:var(--lilac);background:var(--lilac);color:var(--white)}
+
+.stepper{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:42px;padding:0 5px;border-radius:var(--r-pill);background:var(--lilac);color:var(--white)}
+.step{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-size:1.05rem;line-height:1;transition:background-color .18s var(--ease)}
+.step:hover{background:oklch(100% 0 0 / .18)}
+.qty{font-size:.87rem;font-weight:600;font-variant-numeric:tabular-nums}
+
+@media(min-width:640px){.item{max-width:calc(50% - 9px)}}
+@media(min-width:900px){.item{max-width:calc(33.333% - 12px)}}
+@media(min-width:1180px){.item{max-width:calc(25% - 14px)}}

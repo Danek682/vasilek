@@ -1,0 +1,4 @@
+.top{background:linear-gradient(172deg,oklch(93% .032 305),oklch(97.5% .014 305))}
+.topIn{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--sp-md);max-width:var(--w);margin:0 auto;padding:clamp(26px,3.4vw,48px) var(--sp-md) clamp(22px,2.6vw,34px)}
+.topText{display:flex;flex-direction:column;gap:9px;max-width:46ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px}

@@ -1,0 +1,48 @@
+.top{position:sticky;top:0;z-index:var(--z-header);display:flex;align-items:center;gap:var(--sp-md);padding:10px var(--sp-md);background:oklch(97.5% .014 305 / .93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.logo{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.brandText{display:flex;flex-direction:column;gap:1px;line-height:1.1}
+.brandText b{font-family:var(--f-display);font-weight:400;font-size:1.22rem;letter-spacing:.01em;color:var(--lilac-deep)}
+.brandText span{font-size:.66rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+
+.nav{display:none;align-items:center;gap:26px;font-size:.92rem;font-weight:500}
+.nav a{position:relative;padding:5px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--fuchsia);transition:right .3s var(--ease)}
+.nav a:hover::after{right:0}
+
+.tel{display:none;flex-direction:column;gap:1px;text-align:right;line-height:1.15}
+.tel b{font-family:var(--f-display);font-weight:400;font-size:1.02rem;letter-spacing:-.01em;transition:color .2s var(--ease)}
+.tel span{font-size:.66rem;color:var(--ink-3)}
+.tel:hover b{color:var(--fuchsia)}
+
+.cart{display:flex;align-items:center;gap:9px;min-height:46px;padding:0 8px 0 16px;border-radius:var(--r-pill);background:var(--lilac);color:var(--white);font-size:.9rem;font-weight:600;transition:background-color .22s var(--ease),transform .18s var(--ease)}
+.cart:hover{background:var(--lilac-mid);transform:translateY(-1px)}
+.cartLabel{display:none}
+.cartSum{display:none;font-variant-numeric:tabular-nums}
+.badge{display:flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 7px;border-radius:var(--r-pill);background:var(--fuchsia);font-size:.8rem;font-variant-numeric:tabular-nums}
+.badgeEmpty{background:oklch(100% 0 0 / .22)}
+
+.burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0 11px;border-radius:12px;flex:0 0 auto;transition:background-color .2s var(--ease)}
+.burger:hover{background:var(--wash-2)}
+.burger i{display:block;height:2px;border-radius:2px;background:var(--lilac-deep);transition:transform .32s var(--ease)}
+.burgerOpen i:first-child{transform:translateY(3.5px) rotate(45deg)}
+.burgerOpen i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+
+.drawer{position:fixed;left:0;right:0;top:66px;z-index:calc(var(--z-header) - 1);display:flex;flex-direction:column;gap:var(--sp-md);padding:var(--sp-md) var(--sp-md) 26px;background:var(--wash);border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .34s var(--ease),opacity .24s var(--ease),visibility .34s}
+.drawerOpen{transform:none;opacity:1;visibility:visible}
+.drawerNav{display:flex;flex-direction:column}
+.drawerNav a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.drawerNav a span{font-family:var(--f-body);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.drawerFoot{display:flex;flex-direction:column;gap:6px}
+.drawerTel{font-family:var(--f-display);font-weight:400;font-size:1.6rem;letter-spacing:-.02em;color:var(--lilac-deep)}
+.drawerMeta{font-size:.85rem;color:var(--ink-2)}
+
+@media(min-width:940px){
+  .top{padding:12px 28px;gap:var(--sp-lg)}
+  .nav,.tel{display:flex}
+  .burger,.drawer{display:none}
+  .logo{width:52px;height:52px}
+  .cartLabel,.cartSum{display:inline}
+  .cart{padding-left:20px}
+}
