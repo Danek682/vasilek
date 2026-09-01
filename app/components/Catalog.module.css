@@ -1,23 +1,121 @@
-.wrap{display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26px, 3vw, 44px);
+}
 
-.filters{position:sticky;top:66px;z-index:20;display:flex;gap:8px;overflow-x:auto;padding:12px var(--sp-md);margin:0 calc(var(--sp-md) * -1);background:oklch(97.5% .014 305 / .94);backdrop-filter:blur(8px);overflow-behavior:x-contain}
-.chip{flex:0 0 auto;min-height:40px;padding:0 17px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--white);font-size:.86rem;font-weight:500;white-space:nowrap;transition:border-color .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease)}
-.chip:hover{border-color:var(--lilac)}
-.chipOn{background:var(--lilac-deep);border-color:var(--lilac-deep);color:var(--cream)}
-.chipCount{margin-left:7px;font-size:.76rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.chipOn .chipCount{color:oklch(80% .06 305)}
+.filters {
+  position: sticky;
+  top: 66px;
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px var(--sp-md);
+  margin: 0 calc(var(--sp-md) * -1);
+  background: oklch(97.5% 0.014 305 / 0.94);
+  backdrop-filter: blur(8px);
+  overflow-behavior: x-contain;
+}
+.chip {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 17px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--white);
+  font-size: 0.86rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s var(--ease),
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+.chip:hover {
+  border-color: var(--lilac);
+}
+.chipOn {
+  background: var(--lilac-deep);
+  border-color: var(--lilac-deep);
+  color: var(--cream);
+}
+.chipCount {
+  margin-left: 7px;
+  font-size: 0.76rem;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.chipOn .chipCount {
+  color: oklch(80% 0.06 305);
+}
 
-.group{display:flex;flex-direction:column;gap:16px;scroll-margin-top:120px}
-.groupHead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 20px;padding-bottom:11px;border-bottom:1px solid var(--line)}
-.groupTitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
-.groupTitle h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.85rem);letter-spacing:-.015em}
-.groupTitle span{font-size:.83rem;color:var(--ink-3)}
-.groupMeta{font-size:.83rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-margin-top: 120px;
+}
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px 20px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line);
+}
+.groupTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+}
+.groupTitle h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  letter-spacing: -0.015em;
+}
+.groupTitle span {
+  font-size: 0.83rem;
+  color: var(--ink-3);
+}
+.groupMeta {
+  font-size: 0.83rem;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
 
-.grid{display:flex;flex-wrap:wrap;gap:30px 18px}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 18px;
+}
 
-.empty{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:44px 26px;border:1px dashed var(--line);border-radius:var(--r-md);background:var(--white)}
-.empty b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
-.empty p{font-size:.92rem;color:var(--ink-2);max-width:44ch}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 44px 26px;
+  border: 1px dashed var(--line);
+  border-radius: var(--r-md);
+  background: var(--white);
+}
+.empty b {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.empty p {
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  max-width: 44ch;
+}
 
-@media(min-width:940px){.filters{top:74px}}
+@media (min-width: 940px) {
+  .filters {
+    top: 74px;
+  }
+}
